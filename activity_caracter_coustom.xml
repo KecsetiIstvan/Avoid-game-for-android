@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".caracterCoustom"
+    android:background="#c42a00">
+
+    <com.example.kecseti.avoid.game.CoustomView
+        android:id="@+id/coustomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primary color:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/primary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secondary color:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/secondary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/primaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primary"
+        android:background="#ff2600"
+        android:text="Save"
+        android:fontFamily="casual"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/secondaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondary"
+        android:background="#ff2600"
+        android:text="Save"
+        android:fontFamily="casual"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <SeekBar
+        android:id="@+id/primary"
+        android:layout_width="1000px"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="300dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/secondary"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primary"
+      />
+
+</android.support.constraint.ConstraintLayout>
